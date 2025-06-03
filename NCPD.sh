@@ -36,8 +36,8 @@ Port_Listening() {
 directory_bruteforce() {
     echo -e "${BLUE}[+] Performing directory brute-forcing...${NC}"
     read -p "Enter target URL (e.g., http://example.com): " url
-    read -p "Enter path to wordlist:(/usr/share/wordlists/dirbuster/directory-list.........txt) " wordlist
-    gobuster dir -u "$url" -w /usr/share/wordlists/dirbuster/directory-list-"$wordlist".txt
+    read -p "Enter path to wordlist:(full path)" wordlist
+    gobuster dir -u "$url" -w "$wordlist"
 }
 
 # Function to display a menu
